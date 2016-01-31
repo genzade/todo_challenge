@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="ToDoList">
+<html lang="en" ng-app="ToDoListing">
   <head>
     <meta charset="utf-8">
     <title>Github user search</title>
@@ -8,13 +8,20 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/toDoListAddController.js"></script>
   </head>
 
-  <body>
-    <div>
-      <form class="form-horizontal" >
-        <input type="text" placeholder="what d'ya wanna do">
-        <button class="btn">add</button>
+  <body ng-controller="ToDoListAddController as addCtrl">
+    <div align-center>
+      <form class="form-horizontal">
+        <input type="text" placeholder="what d'ya wanna do" ng-model="addCtrl.task">
+        <button class="btn" ng-click="addCtrl.addTask()">add</button>
+        <br>
+        <span ng-class="{'done': task.done}" ng-repeat="task in addCtrl.taskList">
+          {{task.taskName}}
+          <button class="btn" ng-click="addCtrl.editMode($index)">edit</button>
+          <br>
+        </span>
       </form>
       </ul>
     </div>
