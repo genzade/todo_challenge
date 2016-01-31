@@ -18,6 +18,7 @@
         <button class="btn" ng-click="addCtrl.addTask()">add</button>
         <br>
         <span ng-class="{'done': task.done}" ng-repeat="task in addCtrl.taskList">
+          <input type="checkbox" ng-model="task.done">
           {{task.taskName}}
           <button class="btn" ng-click="addCtrl.editMode($index)">edit</button>
           <br>
