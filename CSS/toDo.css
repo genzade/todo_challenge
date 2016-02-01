@@ -1,0 +1,26 @@
+body {
+  text-align: center;
+  background-image: url("paper.jpg");
+  background-repeat: no-repeat;
+ }
+
+.page-wrap {
+  text-align: center;
+  width: 800px;
+  margin: 30px auto;
+}
+
+.checkbox {
+  width: 2px;
+  margin: 2px auto;
+  position: relative;
+}
+
+p {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 40px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  line-height: 1px;
+}

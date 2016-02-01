@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>To Do List</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/CSS/toDo.css">
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
@@ -12,15 +13,17 @@
   </head>
 
   <body ng-controller="ToDoListAddController as addCtrl">
-    <div>
+    <div class="page-wrap">
       <form class="form-horizontal">
         <input type="text" placeholder="what d'ya wanna do" ng-model="addCtrl.task">
-        <button class="btn" ng-click="addCtrl.addTask()">add</button>
-        <br>
-        <span ng-class="{'done': task.done}" ng-repeat="task in addCtrl.taskList">
-          <input type="checkbox" ng-model="task.done">
-          {{task.taskName}}
-          <button class="btn" ng-click="addCtrl.editMode($index)">edit</button>
+        <button class="addBtn" ng-click="addCtrl.addTask()">add</button>
+        <br><br><br><br><br><br>
+        <span ng-class="{'done': task.done}" ng-repeat="task in addCtrl.taskList" class="taskList">
+          <div class="checkbox">
+            <input type="checkbox" ng-model="task.done">
+          </div>
+          <p>{{task.taskName}}</p>
+          <button class="editBtn" ng-click="addCtrl.editMode($index)">edit</button>
           <br>
         </span>
       </form>
