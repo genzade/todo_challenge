@@ -14,11 +14,15 @@ describe("ToDo List", function() {
   it("adding toDo's on the page", function() {
     taskfield.sendKeys("enter batcave");
     addButton.click();
-    expect(taskList.getText()).toEqual("enter batcave edit");
+    expect(taskList.getText()).toEqual("enter batcave");
   });
 
-  it("can clear completed", function() {
-    
-  });
+  // it("can clear completed", function() {
+  //   taskfield.sendKeys("enter batcave");
+  //   addButton.click();
+  //   element.all(by.className("checkbox")).first().click();
+  //   element(by.className("clearBtn")).click();
+  //   expect(taskList.getText()).toEqual("edit");
+  // });
 
 });

@@ -1,7 +1,9 @@
 body {
   text-align: center;
   background-image: url("paper.jpg");
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
+  margin: auto;
+  background-position: 50% 123%;
  }
 
 .page-wrap {
@@ -11,9 +13,14 @@ body {
 }
 
 .checkbox {
-  width: 2px;
-  margin: 2px auto;
-  position: relative;
+  display: inline-flex;
+}
+
+.taskList {
+  margin-bottom: 10px;
+}
+.editBtn {
+  margin-left: auto;
 }
 
 p {
